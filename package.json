@@ -1,0 +1,26 @@
+{
+  "name": "lqs-atitus-backend",
+  "version": "1.0.0",
+  "description": "project developed for an interview",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loureqdsz/lqs-atitus-backend.git"
+  },
+  "author": "Lourenco Quadros de Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loureqdsz/lqs-atitus-backend/issues"
+  },
+  "homepage": "https://github.com/loureqdsz/lqs-atitus-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "twilio": "^4.10.0"
+  }
+}
