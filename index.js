@@ -8,27 +8,21 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
+app.use(express.json());
+
 app.use(cors({
   origin: '*'
 }));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('The backend is alive!!');
 });
 
 app.get('/menu', menuController.allMenuData);
-
-app.post('/create-menu-item', (req, res) => {
-  res.send("Item no menu criado")
-});
-
-app.post('/update-menu-item', (req, res) => {
-  res.send("Item no menu atualizado")
-});
-
-app.post('/delete-menu-item', (req, res) => {
-  res.send("Item no menu deletado")
-});
+app.post('/restore-menu', menuController.populateMenuAgain);
+app.post('/create-menu-item', menuController.addMenuData);
+app.post('/delete-menu-item', menuController.deleteMenuData);
+app.post('/update-menu-item', menuController.updateMenuData);
 
 app.post('/sign-up', (req, res) => {
   res.send("Usuário criado")

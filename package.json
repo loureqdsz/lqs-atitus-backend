@@ -4,7 +4,7 @@
   "description": "project developed for an interview",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "^2.0.22",
-    "twilio": "^4.10.0"
+    "twilio": "^4.10.0",
+    "uuid": "^9.0.0"
   }
 }
