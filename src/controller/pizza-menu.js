@@ -51,8 +51,8 @@ async function addMenuData (req, res, next) {
       img: req.body?.img,
       name: req.body?.name,
       size: req.body?.size,
-      preparationTime: `${req.body?.preparationTime} minutos`,
-      price: `R$ ${req.body?.price}`,
+      preparationTime: req.body?.preparationTime,
+      price: req.body?.price,
       description: req.body?.description
     }]
 
@@ -75,8 +75,8 @@ async function updateMenuData (req, res, next) {
         item.img = req.body?.img,
         item.name = req.body?.name,
         item.size = req.body?.size,
-        item.preparationTime = `${req.body?.preparationTime} minutos`,
-        item.price = `R$ ${req.body?.price}`,
+        item.preparationTime = req.body?.preparationTime,
+        item.price = req.body?.price,
         item.description = req.body?.description
 
         return item

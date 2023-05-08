@@ -28,7 +28,6 @@ async function getUserInfoAndRedirectToApp (req, res, next) {
   const { tokens } = await client.getToken(code)
 
   // Store the tokens in a secure manner, such as a database or environment variables
-  console.log(tokens)
   client.setCredentials(tokens)
   try {
     // Get the user's information from the userinfo API
