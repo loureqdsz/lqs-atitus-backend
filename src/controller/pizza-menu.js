@@ -16,7 +16,7 @@ async function populateMenuAgain (req, res, next) {
     const backup = MenuDataBackup
     fs.writeFileSync('./dataBase/pizzaMenu/menu.json', JSON.stringify(backup))
 
-    res.status(200).send()
+    res.status(200).send(backup)
   } catch (err) {
     console.log('--> Some Error Occur: ERR - ', err)
   }
@@ -35,7 +35,7 @@ async function deleteMenuData (req, res, next) {
 
     fs.writeFileSync('./dataBase/pizzaMenu/menu.json', JSON.stringify(newMenuData))
 
-    res.status(200).send()
+    res.status(200).send(newMenuData)
   } catch (err) {
     console.log('--> Some Error Occur: ERR - ', err)
   }
@@ -59,7 +59,7 @@ async function addMenuData (req, res, next) {
     const newMenuData = newItem.concat(allData)
     fs.writeFileSync('./dataBase/pizzaMenu/menu.json', JSON.stringify(newMenuData))
 
-    res.status(200).send()
+    res.status(200).send(newMenuData)
   } catch (err) {
     console.log('--> Some Error Occur: ERR - ', err)
   }
@@ -87,7 +87,7 @@ async function updateMenuData (req, res, next) {
 
     fs.writeFileSync('./dataBase/pizzaMenu/menu.json', JSON.stringify(newMenuData))
 
-    res.status(200).send()
+    res.status(200).send(newMenuData)
   } catch (err) {
     console.log('--> Some Error Occur: ERR - ', err)
   }
